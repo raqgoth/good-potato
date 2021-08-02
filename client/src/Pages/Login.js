@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TextInput from '../Components/TextInput'
 import { __LoginUser} from '../Services/LoginServices'
+import { useHistory } from "react-router-dom";
 
 const Login = (props)  => {
   
@@ -13,14 +14,15 @@ const handleChangeE =({target})=>{
 const handleChangeP =({target})=>{
   setPassword(target.value)
 }
+const history = useHistory();
 
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       const userInf = {email, password}
       const loginData = await __LoginUser(userInf)
-      //console.log(loginData)
-        props.history.push('/home')
+      console.log(loginData)
+        history.push('/home')
         return
       } catch (error) {
       
@@ -28,7 +30,9 @@ const handleSubmit = async (e) => {
   }
     return (
       <div className="signin flex-col">
-        <form className="flex-col" onSubmit={handleSubmit}>
+
+        <form className="flex-col" 
+              onSubmit={handleSubmit}>
       
           <TextInput
             placeholder="Your Email"

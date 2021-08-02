@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import '../styles/LoginNav.css'
+import '../Styles/LoginNav.css'
 
 
 const LoginNav = (props) => {

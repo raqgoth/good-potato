@@ -22,6 +22,13 @@ const Router = (props) => {
                     <Home {...props} />
                 }}
                 />
+                <Route
+                  exact
+                  path="/"
+                  component = { props => 
+                <Login {...props} />
+                }
+                />
             </Switch>
 
         </main>
