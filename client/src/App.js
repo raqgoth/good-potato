@@ -1,7 +1,7 @@
 import React from 'react'
 import Router from './Components/Router'
 
-function App() {
+ const App = () => {
   return (
     <div className="App">
       <Router />

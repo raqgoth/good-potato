@@ -11,9 +11,13 @@ const SignInTeam = async (req, res, next) => {
     }
     res.status(401).send({ msg: 'Unauthorized' })
   }
-
+  const RefreshSessionTeam = (req, res) => {
+    const token = res.locals.token
+    res.send(token)
+  }
   
   module.exports = {
     SignInTeam,
+    RefreshSessionTeam
   }
   

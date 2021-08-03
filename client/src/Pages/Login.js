@@ -8,7 +8,8 @@ const Login = (props)  => {
   const [ email,setEmail]=useState('')
   const [ password,setPassword]=useState('') 
 
-const handleChangeE =({target})=>{
+
+  const handleChangeE =({target})=>{
   setEmail(target.value)
 }
 const handleChangeP =({target})=>{
@@ -30,10 +31,10 @@ const handleSubmit = async (e) => {
   }
     return (
       <div className="signin flex-col">
-
+        
         <form className="flex-col" 
               onSubmit={handleSubmit}>
-      
+              
           <TextInput
             placeholder="Your Email"
             name="email"

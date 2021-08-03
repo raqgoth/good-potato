@@ -1,13 +1,13 @@
 import React from 'react'
 import LoginNav from '../Components/LoginNav'
 
-const Home = () => (
+const ThirdGrade = () => (
     <div>
       <LoginNav />
-            <h3>This is home</h3>
+            <h3>This is third grade</h3>
 
 
         </div>
 
     )
-export default Home
+export default ThirdGrade

@@ -1,12 +1,3 @@
-// const express = require('express');
-// const PORT = process.env.PORT || 5000;
-
-// const app = express();
-
-
-// app.listen(PORT, () => {
-//   console.log(`Express server listening on port ${PORT}`);
-// });
 const AppRouter = require('./routes/AppRouter')
 const express = require('express')
 const logger = require('morgan')
@@ -23,12 +14,9 @@ const app = express()
 app.use(logger('dev'))
 app.use(helmet({ contentSecurityPolicy: false }))
 app.use(cors())
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: true }))
-//app.use(express.static(path.join(__dirname, 'client', 'build')))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, 'client', 'build')))
 // Initialize Middleware
 app.disable('X-Powered-By')
 
