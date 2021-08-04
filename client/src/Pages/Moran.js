@@ -1,19 +1,27 @@
 import React from 'react'
 import LoginNav from '../Components/LoginNav'
 import '../Styles/Moran.css'
-
+import {NavLink} from 'react-router-dom'
+import KidNav from '../Components/KidNav'
 
 const Moran = () => (
     <div>
       <LoginNav />
+      <KidNav />
             <h3>This is Moran</h3>
             <br></br>
+            <NavLink
+            exact to = '/moranparentlog'>
+            Parent Log
+        </NavLink>
+
             <div className = "team">
             <div class="card">
             <div class="card-body">
 
-            <h5 class="card-title">Moran's team</h5>
+            <h5 class="card-title">Moran Sherabi's team</h5>
             <span></span>
+            <p>NYC ID number: 223-33-44</p>
             <p>Speech: Morah Sarah Gold 
            <br></br>718-327-7728
            <br></br>2X30

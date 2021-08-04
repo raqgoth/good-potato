@@ -30,11 +30,9 @@ const handleSubmit = async (e) => {
     }
   }
     return (
-      <div className="signin flex-col">
-        
+      <div className="signin flex-col">  
         <form className="flex-col" 
-              onSubmit={handleSubmit}>
-              
+            onSubmit={handleSubmit}>  
           <TextInput
             placeholder="Your Email"
             name="email"
