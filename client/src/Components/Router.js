@@ -26,8 +26,12 @@ import Kindergarten from '../Pages/Kindergarten'
 import Moran from '../Pages/Moran'
 import MoranParentLog from '../Pages/MoranParentLog'
 import Notes from '../Pages/Notes'
-
-
+import Counseling from '../Pages/therapists/Counseling';
+import OT from '../Pages/therapists/OT';
+import Speech from '../Pages/therapists/Speech';
+//therapists//
+import Batya from '../Pages/therapists/speech/Batya';
+//therapists
 const Router = (props) => {
     return (
         <main>
@@ -86,6 +90,35 @@ const Router = (props) => {
                 path = "/highschool"
                 component = {props => 
                     <HighSchool {...props} />
+                }
+                />
+                {/* therapists */}
+                <Route 
+                exact 
+                path = "/speech"
+                component = {props => 
+                    <Speech {...props} />
+                }
+                />
+                <Route 
+                exact 
+                path = "/ot"
+                component = {props => 
+                    <OT {...props} />
+                }
+                />
+                <Route 
+                exact 
+                path = "/counseling"
+                component = {props => 
+                    <Counseling {...props} />
+                }
+                />
+                 <Route 
+                exact 
+                path = "/batyaroyers"
+                component = {props => 
+                    <Batya {...props} />
                 }
                 />
                 <Route

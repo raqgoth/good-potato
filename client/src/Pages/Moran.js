@@ -14,11 +14,14 @@ const Moran = () => (
             exact to = '/moranparentlog'>
             Parent Log
         </NavLink>
+        <br></br>
+
         <NavLink
             exact to = '/morannotes'>
             Notes
         </NavLink>
-
+        <br></br>
+        <a href="#schedule">Services Weekly Schedule</a>
             <div className = "team">
             <div class="card">
             <div class="card-body">
@@ -48,7 +51,9 @@ const Moran = () => (
         </div>
         <br></br>
         <span></span>
+        <a name = "schedule"></a>
         <div className = "space">
+          <a name = "schedule"></a>
         <table class="table table-bordered">
         
     <thead>

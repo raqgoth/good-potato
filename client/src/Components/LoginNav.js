@@ -17,6 +17,19 @@ const LoginNav = (props) => {
         exact to='/highschool'>
             High School
         </NavLink>
+        <NavLink className = "margin" 
+        exact to='/speech'>
+            Speech Schedules
+        </NavLink>
+        <NavLink className = "margin" 
+        exact to='/ot'>
+            OT Schedules
+        </NavLink>
+        <NavLink className = "margin" 
+        exact to='/counseling'>
+            Counseling Schedules
+        </NavLink>
+        
         <NavLink className = "margin"
           exact to="/"
           onClick={() => localStorage.clear()}
