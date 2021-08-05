@@ -6,7 +6,14 @@ import LogHome from '../Pages/teach/LogHome';
 import Post from '../Pages/teach/Post'
 import EditPost from '../Pages/teach/EditPost'
 import ViewMore from '../Pages/teach/ViewMore'
-///
+/// for teach
+
+// for notes 
+import NotesHome from '../Pages/notes/NotesHome';
+import Note from '../Pages/notes/Note'
+import EditNote from '../Pages/notes/EditNote'
+import ViewNote from '../Pages/notes/ViewNote'
+ 
 import Home from '../Pages/Home'
 import Login from '../Pages/Login'
 import Landing from '../Pages/Landing'
@@ -18,6 +25,7 @@ import ThirdGrade from '../Pages/ThirdGrade'
 import Kindergarten from '../Pages/Kindergarten'
 import Moran from '../Pages/Moran'
 import MoranParentLog from '../Pages/MoranParentLog'
+import Notes from '../Pages/Notes'
 
 
 const Router = (props) => {
@@ -108,12 +116,25 @@ const Router = (props) => {
                 <MoranParentLog {...props} />
                 }
                 />
+                 <Route
+                  exact
+                  path="/morannotes"
+                  component = { props => 
+                <Notes {...props} />
+                }
+                />
                 
                <Route exact path="/loghome" component={LogHome} />
             <Route exact path="/post" component={Post} />
             <Route exact path="/editpost/:postId" component={EditPost} />
             <Route exact path="/viewmore/:postId" component={ViewMore} />
-                
+
+            <Route exact path="/noteshome" component={NotesHome} />
+            <Route exact path="/note" component={Note} />
+            <Route exact path="/editnote/:postId" component={EditNote} />
+            <Route exact path="/viewnote/:postId" component={ViewNote} />
+            
+            
             </Switch>
 
         </main>

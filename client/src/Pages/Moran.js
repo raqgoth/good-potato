@@ -14,6 +14,10 @@ const Moran = () => (
             exact to = '/moranparentlog'>
             Parent Log
         </NavLink>
+        <NavLink
+            exact to = '/morannotes'>
+            Notes
+        </NavLink>
 
             <div className = "team">
             <div class="card">

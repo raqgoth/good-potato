@@ -1,9 +1,10 @@
 import React from 'react'
+import NotesHome from '../Pages/notes/NotesHome'
 
 const  Notes = () => (
     <div>
        
-        <h2>this is Landing page</h2>
+        <NotesHome />
     </div>
     )
 export default Notes

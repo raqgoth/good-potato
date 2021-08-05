@@ -12,7 +12,7 @@ const connection = mongoose.connect(
     useCreateIndex: true
   }
 )
-
+  
 mongoose.set('debug', true)
 
 module.exports = connection
