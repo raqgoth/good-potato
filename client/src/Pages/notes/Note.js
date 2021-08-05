@@ -2,9 +2,9 @@ import React,{ useState } from "react";
 import { Form } from 'react-final-form';
 import { useHistory } from "react-router-dom";
 
-import PostService from '../../Services/notes/PostService'
-import NavBar from '../../Components/notes/NavBar'
+import NoteService from '../../Services/notes/NoteService'
 import CustomField from '../../Components/notes/CustomField'
+import NavBarNote from "../../Components/notes/NavBarNote";
 
 const validators = (value)=> {
     const errors = {}
@@ -31,7 +31,7 @@ const Note = () => {
     const onSubmit = values=>{
         const {title,content,author} = values;
         setLoading(true);
-        PostService.create({title,content,author})
+       NoteService.create({title,content,author})
         .then(res=>{
             setLoading(false);
             setMessage(res.data.message);
@@ -43,12 +43,12 @@ const Note = () => {
 
     return (
         <div className="Post">
-            <NavBar title="Post" />
+            <NavBarNote title="Post" />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3 col-sm-12">
                         { message!==''? (<div className="alert alert-success" >{message}</div>) :''}
-                        <h3>New post</h3>
+                        <h3>New note</h3>
                         <Form
                         validate={validators}
                         onSubmit={onSubmit}

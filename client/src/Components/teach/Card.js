@@ -59,51 +59,51 @@ const Card = (props) => {
             <h5 className="card-title p-2">{props.title}</h5>
             <p className="card-text p-2 text-justify">{props.content}</p>
             <div className="text-right p-2">
-              { add===false? (
-                  <button type="button" className="btn btn-success btn-sm" onClick={()=>{ setAdd(true); }} >add comment</button>
-              ):(
-                <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ setAdd(false); }} >cancel comment</button>
-              ) }
+              {/* { add===false? ( */}
+                  {/* <button type="button" className="btn btn-success btn-sm" onClick={()=>{ setAdd(true); }} >add comment</button> */}
+              {/* ):( */}
+                {/* <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ setAdd(false); }} >cancel comment</button> */}
+              {/* ) } */}
             </div>
             <div className="card">
-                {add? (
+                {/* {add? ( */}
                     <div className="p-2" >
                         <div className="input-group">
-                            <input type="text" onChange={(event)=>setMycomment(event.target.value)} className="form-control" placeholder="Write your comments..." />
+                            {/* <input type="text" onChange={(event)=>setMycomment(event.target.value)} className="form-control" placeholder="Write your comments..." /> */}
                             <div className="input-group-append" id="button-addon4">
-                                <button className="btn btn-success" type="button" onClick={()=>{ sendComment(); }}>send</button>
+                                {/* <button className="btn btn-success" type="button" onClick={()=>{ sendComment(); }}>send</button> */}
                             </div>
                         </div>
                     </div>
-                ) : ('')}
-                <ul className="list-group list-group-flush">
-                    { props.limitComments === true?
+                {/* ) : ('')} */}
+                {/* <ul className="list-group list-group-flush"> */}
+                    {/* { props.limitComments === true? */}
                         
-                            comments.map((item, index) => 
-                            index<3?
-                            (<li className="list-group-item" key={index}>
-                                                <span>{item.comment}</span><br/>
-                                                <span>{item.author}</span><br/>
-                                                <span>{ Moment(item.updatedAt).format('d MMM YYYY') }</span>
-                                                </li>) : ('') )
-                        :
-                        comments.map((item, index) => 
-                           (<li className="list-group-item" key={index}>
-                                            <span>{item.comment}</span><br/>
-                                            <span>{item.author}</span><br/>
-                                            <span>{ Moment(item.updatedAt).format('d MMM YYYY') }</span>
-                                            </li>) 
-                        )
-                    }     
-                    <li className="list-group-item text-center">
-                        {
-                            props.limitComments===true?
-                            (<a href={`/viewmore/${props.id}`} className="btn btn-info btn-sm">view more...</a>)
-                            :(<a href="/LogHome" className="btn btn-primary btn-sm"> Back</a>)
-                        }
-                        
-                    </li>
-                </ul>
+                            {/* comments.map((item, index) =>  */}
+                            {/* index<3? */}
+                            {/* (<li className="list-group-item" key={index}> */}
+                                                {/* <span>{item.comment}</span><br/> */}
+                                                {/* <span>{item.author}</span><br/> */}
+                                                {/* <span>{ Moment(item.updatedAt).format('d MMM YYYY') }</span> */}
+                                                {/* </li>) : ('') ) */}
+                        {/* : */}
+                        {/* comments.map((item, index) =>  */}
+                           {/* (<li className="list-group-item" key={index}> */}
+                                            {/* <span>{item.comment}</span><br/> */}
+                                            {/* <span>{item.author}</span><br/> */}
+                                            {/* <span>{ Moment(item.updatedAt).format('d MMM YYYY') }</span> */}
+                                            {/* </li>)  */}
+                        {/* ) */}
+                    {/* }      */}
+                    {/* <li className="list-group-item text-center"> */}
+                        {/* { */}
+                            {/* props.limitComments===true? */}
+                            {/* (<a href={`/viewmore/${props.id}`} className="btn btn-info btn-sm">view more...</a>) */}
+                            {/* :(<a href="/LogHome" className="btn btn-primary btn-sm"> Back</a>) */}
+                        {/* } */}
+                        {/*  */}
+                    {/* </li> */}
+                {/* </ul> */}
             </div>
             
         </div>

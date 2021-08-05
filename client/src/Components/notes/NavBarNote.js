@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = (props) => {
+const NavBarNote = (props) => {
     return (
         <div className="Navbar">
             <nav className="navbar navbar-expand-lg primary-color ">
@@ -10,10 +10,10 @@ const NavBar = (props) => {
                 </a>            
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a>
+                        <a className="nav-link" href="/moran">back to student</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/post">New post</a>
+                        <a className="nav-link" href="/note">New Note</a>
                     </li>
                 </ul>
             </nav>
@@ -21,4 +21,4 @@ const NavBar = (props) => {
     );
 }
   
-export default NavBar;
+export default NavBarNote;

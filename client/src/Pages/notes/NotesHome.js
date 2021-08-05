@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from "react";
-import NavBar from '../../Components/notes/NavBar'
+import NavBarNote from '../../Components/notes/NavBarNote'
 import Card from '../../Components/notes/Card'
-import PostService from '../../Services/notes/PostService'
+import NoteService from '../../Services/notes/NoteService'
 
 
 const NotesHome = () => {
@@ -9,7 +9,7 @@ const NotesHome = () => {
 
     //life cicle
     useEffect(() => {
-        PostService.get()
+      NoteService.get()
         .then(res=>{
             setPosts(res.data);            
         });
@@ -17,7 +17,7 @@ const NotesHome = () => {
 
     return (
         <div className="Home">
-            <NavBar title="Home" />
+            <NavBarNote title="Home" />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3 col-sm-12">

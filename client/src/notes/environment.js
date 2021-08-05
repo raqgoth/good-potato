@@ -1,6 +1,6 @@
-const BASE_URL   = 'http://localhost:4000/api';
+const BASE_URL   = 'http://localhost:5000/api';
 const environment = {
-  POSTS: `${BASE_URL}/posts`,
+  NOTES: `${BASE_URL}/notes`,
   COMMENTS: `${BASE_URL}/comments`,
 };
 

@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from "react";
 
 import Moment from 'moment';
 import CommentsService from '../../Services/notes/CommentsService'
-import PostService from '../../Services/notes/PostService'
+import NoteService from '../../Services/notes/NoteService'
 
 
 
@@ -33,9 +33,9 @@ const Card = (props) => {
         })
     }
     const deletePost = ()=>{
-        PostService.delete(props.id).then(res=>{
+        NoteService.delete(props.id).then(res=>{
             alert(res.data.message);
-            window.location="/";
+            window.location="/morannotes";
         })
     }
 
@@ -52,20 +52,20 @@ const Card = (props) => {
                    </div>
                 </div>
                 <div className="col-sm-4 p-2 text-right">
-                    <a href={ `/editpost/${props.id}` } type="button" className="btn btn-primary btn-sm mr-2">Edit</a>
-                    <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ deletePost() }}>Delete</button>
+                    {/* <a href={ `/editpost/${props.id}` } type="button" className="btn btn-primary btn-sm mr-2">Edit</a> */}
+                    {/* <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ deletePost() }}>Delete</button> */}
                 </div>
             </div>
             <h5 className="card-title p-2">{props.title}</h5>
             <p className="card-text p-2 text-justify">{props.content}</p>
             <div className="text-right p-2">
-              { add===false? (
-                  <button type="button" className="btn btn-success btn-sm" onClick={()=>{ setAdd(true); }} >add comment</button>
-              ):(
-                <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ setAdd(false); }} >cancel comment</button>
-              ) }
+              {/* { add===false? ( */}
+                   {/* <button type="button" className="btn btn-success btn-sm" onClick={()=>{ setAdd(true); }} >add comment</button> */}
+              {/* ):( */}
+                 {/* <button type="button" className="btn btn-danger btn-sm" onClick={()=>{ setAdd(false); }} >cancel comment</button> */}
+              
             </div>
-            <div className="card">
+            {/* <div className="card">
                 {add? (
                     <div className="p-2" >
                         <div className="input-group">
@@ -103,10 +103,10 @@ const Card = (props) => {
                         }
                         
                     </li>
-                </ul>
+                </ul> */}
             </div>
             
-        </div>
+        
     );
 }
   

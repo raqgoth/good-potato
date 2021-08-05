@@ -2,8 +2,8 @@ import React,{ useEffect, useState } from "react";
 import { Form } from 'react-final-form';
 import { useHistory } from "react-router-dom";
 
-import PostService from '../../Services/notes/PostService'
-import NavBar from '../../Components/notes/NavBar'
+import NoteService from '../../Services/notes/NoteService'
+import NavBarNote from '../../Components/notes/NavBarNote'
 import CustomField from '../../Components/notes/CustomField';
 
 const validators = (value)=> {
@@ -31,7 +31,7 @@ const EditNote = (props) => {
     const {match:{params}} = props;
 
     useEffect(() => {
-        PostService.getById(params.postId) 
+        NoteService.getById(params.postId) 
         .then(res=>{
             setPost({
                 title:res.data.title,
@@ -45,7 +45,7 @@ const EditNote = (props) => {
     const onSubmit = values=>{
        const {title,content,author} = values;
         setLoading(true);
-        PostService.update(params.postId,{title,content,author})
+        NoteService.update(params.postId,{title,content,author})
         .then(res=>{
             setLoading(false);
             setMessage(res.data.message);
@@ -57,7 +57,7 @@ const EditNote = (props) => {
 
     return (
         <div className="Post">
-            <NavBar title="Post" />
+            <NavBarNote title="Post" />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3 col-sm-12">

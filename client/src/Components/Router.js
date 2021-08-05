@@ -1,5 +1,6 @@
 import React from 'react'
 import { Switch, Route, withRouter } from 'react-router'
+import NavBarNote from '../Components/notes/NavBarNote'
 
 //for teach
 import LogHome from '../Pages/teach/LogHome';
